@@ -42,7 +42,9 @@ def songs
 end
 
 def genres
-  songs.collect
+  songs.collect{ |s| s.genre }.uniq
+end
+
 def self.count
   @@all.size
 end
